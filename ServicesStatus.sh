@@ -58,7 +58,7 @@ printServices() {
 	k=0
 	while [ $k -lt $max ];
 	do
-		if [ $k -gt $printInstructionFlag -a $k -lt $((printInstructionFlag+40)) ];
+		if [ $k -gt $printInstructionFlag -a $k -lt $((printInstructionFlag+32)) ];
 		then
 			printf "[%3s][%-24s]" ${row[$((k++))]} ${row[$((k++))]} ##Active services
 			printf "\e[0;31m[%3s][%-24s]\e[0;0m" ${row[$((k++))]} ${row[$((k++))]} ##Inactive services
