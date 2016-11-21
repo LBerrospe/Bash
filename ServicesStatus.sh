@@ -77,7 +77,7 @@ actionUser() {
 	read inputUser 
 	start=$(echo "$inputUser" | egrep -oi 'start [0-9]+')
 	stop=$(echo "$inputUser" | egrep -oi 'stop [0-9]+')
-	idService=$(echo "$inputUser" | egrep -oi '[0-9]+')
+	idService=$(echo "$inputUser" | egrep -o '[0-9]+')
 	if [ "$inputUser" = "$start" ];
 	then
 		idService=$((2+idService+(3*($idService-1))))
